@@ -2,28 +2,31 @@
 window.addEventListener('load', Initieer);
 
 // Globale Variabelen
+var txtID;
+var txtCssSelector
+var txtNaam;
 var divFeedback;
-var btnVerbergElementMetId;
-var btnVerbergElementMetSelector;
 
 
 // StartUP
 function Initieer() {
     // Lokale variabelen
-    var txtId;
-    var txtNaam;
-    var txtCssSelector;
+    let btnVerbergElementMetId;
+    let btnVerbergElementMetSelector;
 
     // Inlezen DOM-elementen
-    txtId = document.getElementById("txtId");
-    txtNaam = document.getElementById("txtNaam");
-    txtCssSelector = document.getElementById("txtCssSelector");
-    txtId.value = "TEST";
+    txtId = document.getElementById('txtId');
+    txtNaam = document.getElementById('txtNaam');
+    txtCssSelector = document.getElementById('txtCssSelector');
+    divFeedback = document.getElementById('divFeedback');
+
+    btnVerbergElementMetId = document.getElementById('btnVerbergElementMetId');
+    btnVerbergElementMetSelector = document.getElementById('btnVerbergElementMetSelector');
 
 
     // Toevoegen Event-Listeners
-    btnVerbergElementMetId.addEventListener("click", ToonVerbergElementViaId);
-    btnVerbergElementMetSelector.addEventListener("click", ToonVerbergElementViaSelector);
+    btnVerbergElementMetId.addEventListener('click', ToonVerbergElementViaId);
+    btnVerbergElementMetSelector.addEventListener('click', ToonVerbergElementViaSelector);
 
 }
 
